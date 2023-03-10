@@ -16,25 +16,63 @@ h1 {
     font-weight: 700;
 }
 
+
+/* MAIN ------> */
+
 main {
     background-color: #ffffff80;
     padding: 2em 4em;
     border-radius: 1em;
+    /* transition: all .1s ease-in-out; */
 }
+
+main:hover {
+    cursor: pointer;
+}
+
+main:hover h2 {
+    cursor: pointer;
+    color: #fbf83f;
+}
+
+main:hover .button {
+    display: inline;
+    color: #fbf83f;
+    opacity: 1;
+}
+
+section:active h2 {
+    color: #3F5EFB;
+}
+
+section:active .button {
+    color: #3F5EFB;
+}
+
 
 section {
     width: 70vw;
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 2em;
     border-top: 0.1rem solid #ffffff90;
+    color: #ffffff;
 }
 
-section:hover {
-    cursor: pointer;
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
+
+section:hover .content {
+    opacity: 1;
+    height: auto;
+}
+
 
 #last-section {
     padding-bottom: 0;
@@ -48,20 +86,67 @@ h2 {
     font-family: "Montserrat";
     font-weight: 600;
     font-size: 1.7em;
-    color: #ffffff;
+    transition: all .5s ease-in-out;
 }
 
-h2:hover {
-    color: #3F5EFB;
+.button {
+    opacity: 0;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.7em;
+    transition: all .5s ease-in-out;
 }
 
-.title {
-    padding: 1.3em 0 2em 0;
-    display: flex;
-    flex-direction: row;
+.meme-pic {
+    max-width: 25em;
     width: 100%;
-    justify-content: space-between;
+    height: auto;
+    border-radius: 1em;
+}
 
+label {
+    padding: 1.3em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Radio box -----> */
+input {
+    display: none;
+}
+
+input+label .content {
+    max-width: 0vh;
+    transition: all .5s ease-in-out;
+}
+
+input:checked+label .content {
+    max-width: 100vh;
+    transition: all .5s ease-in-out;
+    padding: 2em 0;
+}
+
+input:hover+label .content {
+    max-width: 100vh;
+    transition: all .5s ease-in-out;
+    padding: 2em 0;
+}
+
+input:checked+label h2 {
+    color: #fbf83f;
+}
+
+
+
+input:checked .plus-button {
+    opacity: 0;
+}
+
+input .plus-button {
+    opacity: 0;
 }
 
 svg {
@@ -70,26 +155,6 @@ svg {
     fill: #ffffff90;
 }
 
-svg:hover {
-    fill: #ffffff;
-}
-
-.plus-button {
-    display: none;
-}
-
-.hide-button:focus {
-    display: none;
-}
-
-.meme-pic {
-    max-width: 25em;
-    width: 100%;
-    height: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 1em;
-}
 
 footer {
     height: 7em;
@@ -103,18 +168,14 @@ footer {
 a {
     text-decoration: none;
     color: #ffffff90;
+    transition: all .2s ease-in-out;
 }
 
 a:hover {
     color: #fff;
 }
 
-.logo-rsschool {
-    width: 5.5em;
-    height: 5.5em;
-}
-
-p {
+.footer-text {
     font-size: 1.5em;
     font-family: "Montserrat";
     font-weight: 600;
