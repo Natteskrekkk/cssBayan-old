@@ -26,32 +26,8 @@ main {
     /* transition: all .1s ease-in-out; */
 }
 
-main:hover {
-    cursor: pointer;
-}
-
-main:hover h2 {
-    cursor: pointer;
-    color: #fbf83f;
-}
-
-main:hover .button {
-    display: inline;
-    color: #fbf83f;
-    opacity: 1;
-}
-
-section:active h2 {
-    color: #3F5EFB;
-}
-
-section:active .button {
-    color: #3F5EFB;
-}
-
-
 section {
-    width: 70vw;
+    width: 50vw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -90,15 +66,27 @@ h2 {
 }
 
 .button {
-    opacity: 0;
     font-family: "Montserrat";
     font-weight: 600;
-    font-size: 1.7em;
-    transition: all .5s ease-in-out;
+    transition: all .1s linear;
+}
+
+.plus-button {
+    margin-left: auto;
+}
+
+.hide-button {
+    font-size: 0em;
+    /* display: none; */
+}
+
+.plus-button {
+    font-size: 0em;
+    /* display: none; */
 }
 
 .meme-pic {
-    max-width: 25em;
+    max-width: 30em;
     width: 100%;
     height: auto;
     border-radius: 1em;
@@ -120,18 +108,18 @@ input {
 
 input+label .content {
     max-width: 0vh;
-    transition: all .5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 input:checked+label .content {
     max-width: 100vh;
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
     padding: 2em 0;
 }
 
 input:hover+label .content {
     max-width: 100vh;
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
     padding: 2em 0;
 }
 
@@ -139,15 +127,101 @@ input:checked+label h2 {
     color: #fbf83f;
 }
 
-
-
-input:checked .plus-button {
-    opacity: 0;
+main:hover .hide-button {
+    /* display: none; */
+    color: #fbf83f;
+    font-size: 0em;
+    transition: all .5s ease-in-out;
 }
 
-input .plus-button {
-    opacity: 0;
+main:hover .plus-button {
+    margin-left: auto;
+    /* display: inline; */
+    color: #fbf83f;
+    font-size: 1.7em;
+    transition: all .5s ease-in-out;
 }
+
+input:checked+label .plus-button {
+    font-size: 0em;
+    /* display: none; */
+    margin-left: auto;
+    transition: all .5s ease-in-out;
+}
+
+main:hover input:checked+label .hide-button {
+    /* display: inline; */
+    font-size: 1.7em;
+    transition: all .5s ease-in-out;
+}
+
+main:hover input:hover+label .hide-button {
+    /* display: inline; */
+    font-size: 1.7em;
+    transition: all .5s ease-in-out;
+}
+
+main:hover input:hover+label .plus-button {
+    margin-left: auto;
+    /* display: none; */
+    font-size: 0em;
+    transition: all .5s ease-in-out;
+}
+
+main:active input:hover+label .plus-button {
+    margin-left: auto;
+    /* display: inline; */
+    font-size: 1.7em;
+    transition: all .5s ease-in-out;
+}
+
+main:active input:hover+label .hide-button {
+    /* display: none; */
+    font-size: 0em;
+    transition: all .5s ease-in-out;
+}
+
+main:active input:checked+label .plus-button {
+    margin-left: auto;
+    /* display: none; */
+    font-size: 0em;
+    transition: all .5s ease-in-out;
+}
+
+main:active input:checked+label .hide-button {
+    /* display: inline; */
+    font-size: 1.7em;
+    transition: all .5s ease-in-out;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+main:hover h2 {
+    cursor: pointer;
+    color: #fbf83f;
+}
+
+label:active {
+    cursor: wait;
+}
+
+section:active h2 {
+    color: #3F5EFB;
+    cursor: wait;
+}
+
+section:active .button {
+    color: #3F5EFB;
+}
+
+section:active .content {
+    opacity: .4;
+}
+
+
+
 
 svg {
     width: 1.7em;
@@ -158,7 +232,7 @@ svg {
 
 footer {
     height: 7em;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -168,11 +242,15 @@ footer {
 a {
     text-decoration: none;
     color: #ffffff90;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 a:hover {
     color: #fff;
+}
+
+a:active {
+    color: #3F5EFB;
 }
 
 .footer-text {
