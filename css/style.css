@@ -222,7 +222,7 @@ a:active {
     }
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 821px) {
     main:active input:checked+label .plus-button {
         margin-left: auto;
         font-size: 0rem;
