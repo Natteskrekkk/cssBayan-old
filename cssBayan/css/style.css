@@ -123,39 +123,15 @@ input:checked+label h2 {
     color: #fbf83f;
 }
 
+
+
 input:checked+label .plus-button {
     font-size: 0rem;
     margin-left: auto;
     transition: all .5s ease-in-out;
 }
 
-main:active input:checked+label .plus-button {
-    margin-left: auto;
-    font-size: 0rem;
-    transition: all .5s ease-in-out;
-}
 
-main:active input:checked+label .hide-button {
-    font-size: 1.7rem;
-    transition: all .5s ease-in-out;
-}
-
-label:active {
-    cursor: wait;
-}
-
-section:active h2 {
-    color: #3F5EFB;
-    cursor: wait;
-}
-
-section:active .button {
-    color: #3F5EFB;
-}
-
-section:active .content {
-    opacity: .4;
-}
 
 svg {
     width: 1.7rem;
@@ -247,6 +223,17 @@ a:active {
 }
 
 @media (hover: hover) {
+    main:active input:checked+label .plus-button {
+        margin-left: auto;
+        font-size: 0rem;
+        transition: all .5s ease-in-out;
+    }
+
+    main:active input:checked+label .hide-button {
+        font-size: 1.7rem;
+        transition: all .5s ease-in-out;
+    }
+
     input:hover+label .content {
         max-width: 100vh;
         transition: all .7s ease-in-out;
@@ -318,11 +305,39 @@ a:active {
         cursor: wait;
     }
 
+    label:active {
+        color: #3F5EFB;
+        cursor: wait;
+    }
+
     section:active .button {
         color: #3F5EFB;
     }
 
     a:active {
         color: #3F5EFB;
+    }
+
+    section:active input:checked+label h2 {
+        color: #3F5EFB;
+    }
+
+
+    label:active {
+        cursor: wait;
+    }
+
+    section:active h2 {
+        color: #3F5EFB;
+        cursor: wait;
+    }
+
+    section:active .button {
+        color: #3F5EFB;
+        font-size: 0;
+    }
+
+    section:active .content {
+        opacity: .4;
     }
 }
